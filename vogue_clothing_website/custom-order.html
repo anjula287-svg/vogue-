@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOGUE | Custom Order</title>
+<meta name="description" content="Create custom DTF printed clothing orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.jpeg" alt="VOGUE logo" class="brand-logo">
+      <div class="brand-text">
+        <span>VOGUE</span>
+        <small>By Pasini Ruwanthika</small>
+      </div>
+    </a>
+    <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="custom-order.html">Custom Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="custom-order.html" class="cart-pill">Cart <span id="cartCount">0</span></a>
+    </nav>
+  </div>
+</header>
+<main class="container page-top">
+  <div class="section-heading">
+    <span class="eyebrow">Custom Order</span>
+    <h1>Make your own order in a few clicks.</h1>
+    <p>Select items, add details, and send the order through WhatsApp or contact form.</p>
+  </div>
+
+  <div class="order-grid">
+    <form class="order-form" onsubmit="submitOrder(event)">
+      <h2>Order Details</h2>
+      <label>Customer Name<input required type="text" id="customerName" placeholder="Your name"></label>
+      <label>Phone Number<input required type="tel" id="customerPhone" placeholder="+94..."></label>
+      <label>Design Note<textarea id="orderNote" rows="5" placeholder="Color, size, logo, print style, etc."></textarea></label>
+      <button type="submit" class="btn primary">Send Order to WhatsApp</button>
+      <a class="btn secondary full" href="contact.html">Contact Us</a>
+    </form>
+
+    <aside class="summary-card">
+      <h2>Cart Summary</h2>
+      <div id="cartItems" class="cart-items">No items added yet.</div>
+      <div class="summary-total">
+        <span>Total</span><strong id="cartTotal">LKR 0</strong>
+      </div>
+      <button class="btn secondary full" onclick="clearCart()">Clear Cart</button>
+    </aside>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>VOGUE</h3>
+      <p>Light, modern clothing brand website for DTF printed apparel, custom orders, and premium everyday wear.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="products.html">Products</a>
+      <a href="custom-order.html">Custom Order</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>WhatsApp orders, custom logos, team wear, and event prints.</p>
+      <a href="tel:+94770000000">+94 77 000 0000</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">© <span id="year"></span> VOGUE. All rights reserved.</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

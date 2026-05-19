@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOGUE | DTF Printed Clothing</title>
+<meta name="description" content="Modern DTF printed clothing brand website for custom apparel orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.jpeg" alt="VOGUE logo" class="brand-logo">
+      <div class="brand-text">
+        <span>VOGUE</span>
+        <small>By Pasini Ruwanthika</small>
+      </div>
+    </a>
+    <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="custom-order.html">Custom Order</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="custom-order.html" class="cart-pill">Cart <span id="cartCount">0</span></a>
+    </nav>
+  </div>
+</header>
+<main class="container page-top">
+  <div class="section-heading">
+    <span class="eyebrow">Products</span>
+    <h1>Choose ready-made products or add them to your order.</h1>
+    <p>Customers can browse popular DTF printed clothing items and quickly build an order.</p>
+  </div>
+
+  <div class="toolbar">
+    <input id="searchInput" type="search" placeholder="Search products..." oninput="filterProducts()">
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">All Categories</option>
+      <option value="tees">Tees</option>
+      <option value="hoodies">Hoodies</option>
+      <option value="polo">Polo</option>
+      <option value="kids">Kids</option>
+      <option value="caps">Caps</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="productGrid">
+    <article class="product-card" data-name="Classic DTF Tee" data-category="tees">
+      <div class="product-badge">Best Seller</div>
+      <h3>Classic DTF Tee</h3><p>Soft cotton tee with vibrant full-color DTF printing.</p><strong>LKR 2,490</strong>
+      <button class="btn primary" onclick="addToCart('Classic DTF Tee', 2490)">Add to Order</button>
+    </article>
+    <article class="product-card" data-name="Oversized Street Tee" data-category="tees">
+      <div class="product-badge">Trending</div>
+      <h3>Oversized Street Tee</h3><p>Relaxed fit oversized shirt made for bold graphics.</p><strong>LKR 2,990</strong>
+      <button class="btn primary" onclick="addToCart('Oversized Street Tee', 2990)">Add to Order</button>
+    </article>
+    <article class="product-card" data-name="Premium Hoodie" data-category="hoodies">
+      <div class="product-badge">Winter Pick</div>
+      <h3>Premium Hoodie</h3><p>Heavyweight hoodie with smooth, durable print finish.</p><strong>LKR 5,990</strong>
+      <button class="btn primary" onclick="addToCart('Premium Hoodie', 5990)">Add to Order</button>
+    </article>
+    <article class="product-card" data-name="Polo Shirt" data-category="polo">
+      <div class="product-badge">Corporate</div>
+      <h3>Polo Shirt</h3><p>Smart casual polo for branded uniforms and events.</p><strong>LKR 3,490</strong>
+      <button class="btn primary" onclick="addToCart('Polo Shirt', 3490)">Add to Order</button>
+    </article>
+    <article class="product-card" data-name="Kids Tee" data-category="kids">
+      <div class="product-badge">Family</div>
+      <h3>Kids Tee</h3><p>Bright and comfy DTF printed tees for kids.</p><strong>LKR 1,990</strong>
+      <button class="btn primary" onclick="addToCart('Kids Tee', 1990)">Add to Order</button>
+    </article>
+    <article class="product-card" data-name="Caps" data-category="caps">
+      <div class="product-badge">Accessory</div>
+      <h3>Caps</h3><p>Minimal printed caps for daily wear and brand promotion.</p><strong>LKR 1,490</strong>
+      <button class="btn primary" onclick="addToCart('Caps', 1490)">Add to Order</button>
+    </article>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>VOGUE</h3>
+      <p>Light, modern clothing brand website for DTF printed apparel, custom orders, and premium everyday wear.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="products.html">Products</a>
+      <a href="custom-order.html">Custom Order</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>WhatsApp orders, custom logos, team wear, and event prints.</p>
+      <a href="tel:+94770000000">+94 77 000 0000</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">© <span id="year"></span> VOGUE. All rights reserved.</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
